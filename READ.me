@@ -1,0 +1,140 @@
+# K-Nearest Neighbors (KNN) From Scratch
+
+## Project Overview
+
+This project implements the K-Nearest Neighbors (KNN) classification algorithm from scratch using Python and NumPy.
+
+The project demonstrates the complete KNN workflow, including synthetic dataset generation, train-test splitting, Euclidean distance calculation, nearest-neighbor selection, majority voting, model evaluation, and accuracy analysis for different values of k.
+
+## Objectives
+
+* Understand how the KNN algorithm works internally.
+* Implement KNN without using a ready-made KNN classifier.
+* Calculate Euclidean distances between test and training samples.
+* Predict class labels using nearest-neighbor voting.
+* Evaluate model performance using testing accuracy.
+* Analyze how different values of k affect classification accuracy.
+
+## Dataset
+
+The dataset is generated using `make_classification` from Scikit-learn.
+
+The generated dataset contains:
+
+* 150 samples
+* 4 features
+* 3 informative features
+* 3 classes
+* 1 cluster per class
+* 1% label noise
+
+A student ID is used to generate a random seed so that the data generation and train-test split are reproducible for the project.
+
+## Methodology
+
+### 1. Data Generation
+
+A synthetic multi-class classification dataset is generated using Scikit-learn.
+
+### 2. Train-Test Split
+
+The dataset is divided into:
+
+* 70% training data
+* 30% testing data
+
+The samples are shuffled before splitting.
+
+### 3. Euclidean Distance
+
+The Euclidean distance between test and training points is calculated manually:
+
+```text
+distance = sqrt(sum((x1 - x2)^2))
+```
+
+### 4. KNN Prediction
+
+For each test sample:
+
+1. Calculate its distance from every training sample.
+2. Sort the distances.
+3. Select the nearest k samples.
+4. Count their class labels.
+5. Assign the most common class as the prediction.
+
+### 5. Model Evaluation
+
+The implementation evaluates multiple values of k:
+
+```text
+1, 3, 5, 7, 9
+```
+
+Testing accuracy is calculated for each value.
+
+### 6. Visualization
+
+A line plot is generated to visualize the relationship between:
+
+* Number of neighbors (k)
+* Testing accuracy
+
+## Technologies Used
+
+* Python
+* NumPy
+* Matplotlib
+* Scikit-learn
+
+## Project Structure
+
+```text
+knn-from-scratch/
+│
+├── learning.py
+└── README.md
+```
+
+## How to Run
+
+Install the required libraries:
+
+```bash
+pip install numpy matplotlib scikit-learn
+```
+
+Then run:
+
+```bash
+python learning.py
+```
+
+The program prints:
+
+* Random seed
+* First training samples
+* Part of the distance matrix
+* Nearest neighbors
+* Predicted labels
+* Accuracy for each k value
+
+It also displays a plot showing testing accuracy for different k values.
+
+## Key Concepts
+
+This project demonstrates practical understanding of:
+
+* Supervised Learning
+* Classification
+* K-Nearest Neighbors
+* Euclidean Distance
+* Train-Test Splitting
+* Majority Voting
+* Model Evaluation
+* Hyperparameter Selection
+* Data Visualization
+
+## Author
+
+Salah Hammad Salah

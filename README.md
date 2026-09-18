@@ -1,2 +1,2 @@
-# learning-from-data
-Data science and machine learning project focused on analyzing data and applying machine learning techniques.
+# knn-from-scratch
+K-Nearest Neighbors (KNN) classification implemented from scratch using Python and NumPy, with manual distance calculation, prediction, evaluation, and accuracy analysis.
